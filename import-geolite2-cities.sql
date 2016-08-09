@@ -148,7 +148,7 @@ WHERE (`gc_city`.`subdivision_2_iso_code` != '');
 
 /* ============== Remove certain columns ============== */
 
-ALTER TABLE `gotham_casting_website`.`gc_city` 
+ALTER TABLE `gc_city` 
 	DROP COLUMN `subdivision_2_name`,
 	DROP COLUMN `subdivision_1_name`,
 	DROP COLUMN `country_name`,
@@ -156,5 +156,5 @@ ALTER TABLE `gotham_casting_website`.`gc_city`
 	DROP COLUMN `continent_code`,
 	DROP COLUMN `locale_code`;
 
-DELETE FROM `gotham_casting_website`.`gc_city`
+DELETE FROM `gc_city`
 WHERE `city_name` = '';
